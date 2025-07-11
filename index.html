@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GuiaSubnautica</title>
+    <style>
+
+.video-fundo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100vw;
+  min-height: 100vh;
+  object-fit: cover;
+  z-index: -1; /* pra ficar no fundo */
+}
+
+
+.primeirotexto {
+
+background-color: rgb(79, 247, 219);
+padding: 10px;
+box-shadow: 0px 7px 8px ;
+border-radius: 20px;
+text-align: center;
+
+}
+
+.textobaixo {
+
+background-color: rgb(71, 171, 253);
+padding: 10px;
+box-shadow: 0px 7px 8px ;
+border-radius: 20px;
+text-align: center;
+
+
+
+}
+
+
+.topo-logo {
+  width: 100%;
+  display: flex;              /* usamos flexbox pra centralizar */
+  justify-content: center;    /* centraliza na horizontal */
+  align-items: center;        /* se quiser verticalmente também */
+  padding-top: 10px;          /* espaço do topo */
+  margin-bottom: 20px;
+}
+
+.logo {
+  width: 500px;     /* ajusta o tamanho como quiser */
+  height: auto;
+}
+
+
+
+
+.menu-toggle {
+  display: none;
+}
+
+.pda-botao {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 10;
+  cursor: pointer
+}
+
+.icone-pda {
+  width: 100px;
+}
+
+.pda-container {
+  position: fixed;
+  top: 0;
+  left: -450px; /* escondido */
+  width: 450px;
+  height: auto;
+  transition: left 0.4s ease;
+  z-index: 9;
+}
+
+/* Quando o checkbox for marcado, mostra o PDA */
+.menu-toggle:checked ~ .pda-container {
+  left: 0;
+}
+
+.pda-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Texto por cima da tela do PDA */
+.pda-conteudo {
+  position: absolute;
+  top: 110px;   /* ajuste vertical */
+  left: 110px;  /* ajuste horizontal */
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.pda-conteudo a {
+  color: cyan;
+  text-decoration: none;
+  font-size: 18px;
+  font-family: sans-serif;
+}
+
+.pda-conteudo a:hover {
+  color: white;
+  transform: translateX(5px);
+  transition: 0.2s;
+}
+
+.fundo {
+
+background-image: url(https://cdn.discordapp.com/attachments/1391104525540262032/1392656605216243712/latest.png?ex=68705408&is=686f0288&hm=32f6b8e7a873289edfe8702953ffb27a46fbd0898db2489051df3b47f4fa9193&);
+
+
+
+}
+
+
+
+    </style>
+</head>
+<body>
+<video autoplay muted loop class="video-fundo">
+  <source src="fundojellyshroom.mp4" type="video/mp4">
+</video>
+
+
+ <div class="topo-logo">
+    <img src="logo.png" alt="Logo do site" class="logo">
+  </div>
+<div>
+<h2 class="primeirotexto">Boas vindas, mergulhador da Alterra.</h2>
+</div>
+
+<div>
+<h3 class="textobaixo">Aqui, no Manual do 4546b você encontra um guia completo, de fã, para fã. Temos várias funções, que vão desde descrição detalhada de todas as criaturas, até um mapa interativo do jogo. Abra seu PDA no canto superior esquerdo, e comece a explorar!</h3>
+
+
+
+
+</div>
+
+
+
+
+    <input type="checkbox" id="menu-pda" class="menu-toggle">
+
+<label for="menu-pda" class="pda-botao">
+  <img src="botao.png" class="icone-pda">
+</label>
+
+<div class="pda-container">
+  <img src="https://media.discordapp.net/attachments/1391104525540262032/1392626526717214930/pdafundo1.png?ex=68703805&is=686ee685&hm=4c26a47bbf49065692472d25b30d6093da6e27224a54e69f02c83052f400445f&=&format=webp&quality=lossless&width=1327&height=960" class="pda-img">
+
+  <div class="pda-conteudo">
+    <a href="peixes.html">🐟 Criaturas</a>
+    <a href="bases.html">🏗 Bases</a>
+    <a href="leviataes.html">😈 Leviatãs</a>
+    <a href="biomas.html">🗺️ Biomas</a>
+  </div>
+</body>
+</html>
