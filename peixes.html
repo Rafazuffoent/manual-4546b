@@ -16,65 +16,7 @@
   z-index: -1; /* pra ficar no fundo */
 }
 
-.menu-toggle {
-  display: none;
-}
 
-.pda-botao {
-  position: fixed;
-  top: 20px;
-  left: 20px;
-  z-index: 10;
-  cursor: pointer
-}
-
-.icone-pda {
-  width: 100px;
-}
-
-.pda-container {
-  position: fixed;
-  top: 0;
-  left: -450px; /* escondido */
-  width: 450px;
-  height: auto;
-  transition: left 0.4s ease;
-  z-index: 9;
-}
-
-/* Quando o checkbox for marcado, mostra o PDA */
-.menu-toggle:checked ~ .pda-container {
-  left: 0;
-}
-
-.pda-img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-/* Texto por cima da tela do PDA */
-.pda-conteudo {
-  position: absolute;
-  top: 110px;   /* ajuste vertical */
-  left: 110px;  /* ajuste horizontal */
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.pda-conteudo a {
-  color: cyan;
-  text-decoration: none;
-  font-size: 18px;
-  font-family: sans-serif;
-}
-
-.pda-conteudo a:hover {
-  color: white;
-  transform: translateX(5px);
-  transition: 0.2s;
-}
 .titulo{
 background-color: rgb(71, 253, 162);
 padding: 10px;
@@ -135,7 +77,65 @@ display: flex;
   transform: scale(1.05);
 }
 
+.menu-toggle {
+  display: none;
+}
 
+.pda-botao {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 10;
+  cursor: pointer
+}
+
+.icone-pda {
+  width: 100px;
+}
+
+.pda-container {
+  position: fixed;
+  top: 0;
+  left: -450px; /* escondido */
+  width: 450px;
+  height: auto;
+  transition: left 0.4s ease;
+  z-index: 9;
+}
+
+/* Quando o checkbox for marcado, mostra o PDA */
+.menu-toggle:checked ~ .pda-container {
+  left: 0;
+}
+
+.pda-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Texto por cima da tela do PDA */
+.pda-conteudo {
+  position: absolute;
+  top: 110px;   /* ajuste vertical */
+  left: 110px;  /* ajuste horizontal */
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.pda-conteudo a {
+  color: cyan;
+  text-decoration: none;
+  font-size: 18px;
+  font-family: sans-serif;
+}
+
+.pda-conteudo a:hover {
+  color: white;
+  transform: translateX(5px);
+  transition: 0.2s;
+}
 </style>
 
 </head>
@@ -151,7 +151,7 @@ display: flex;
 
 
 <div class="todosbotoes">
-<a href="criaturas/carnivoros/carnivoros.html">
+<a href="carnivoros.html">
   <img src="carnivoros.png" class="carnivorosbotao">
 </a>
   <a href="herbivoros.html"><img src="herbivoros.png" class="herbivorosbotao">
@@ -161,6 +161,9 @@ display: flex;
 
 </div>
 
+
+
+
     <input type="checkbox" id="menu-pda" class="menu-toggle">
 
 <label for="menu-pda" class="pda-botao">
@@ -168,7 +171,7 @@ display: flex;
 </label>
 
 <div class="pda-container">
-  <img src="https://media.discordapp.net/attachments/1391104525540262032/1392626526717214930/pdafundo1.png?ex=68703805&is=686ee685&hm=4c26a47bbf49065692472d25b30d6093da6e27224a54e69f02c83052f400445f&=&format=webp&quality=lossless&width=1327&height=960" class="pda-img">
+  <img src="pdafundoa.png" class="pda-img">
 
   <div class="pda-conteudo">
     <a href="peixes.html">🐟 Criaturas</a>
