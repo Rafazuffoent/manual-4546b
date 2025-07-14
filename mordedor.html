@@ -5,16 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mordedor</title>
     <style>
+.linha-superior {
+  display: flex;
+  justify-content: space-between; /* espaço entre as duas divs */
+  align-items: flex-start;
+  gap: 20px; /* espaçamento entre esquerda e direita */
+}
 
+.bloco1, .bloco2 {
+  width: 48%; /* divide o espaço horizontal */
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.baixo {
+  margin-top: 30px;
+  background-color: rgba(0, 100, 200, 0.2);
+  padding: 15px;
+  border-radius: 10px;
+}
     </style>
 </head>
 <body>
+<div class="linha-superior">
     <div class="bloco1"><h2>Mordedor</h2>
     <img src="mordedor.png" alt="Clique para ouvir o som!" onclick="document.getElementById('som-mordedor').play()">
     <audio id="som-mordedor" src="mordedorsom.mp3"></audio>
     <h3>Os mordedores são pequenos predadores, extremamente rápido e territorial que eventualmente emitem sons de mordidas e rangidos (pode ser escutado clicando na imagem acima), essas criaturas atacam o jogador imediatamente quando próximos, e cada uma de suas mordidas causam 7 de dano. Os mordedores assim como <a href="carnivoros.html">outras criaturas carnívoras</a>  comerá da mão do jogador caso um peixe (vivo ou morto) seja oferecido. Essas criaturas comem cadáveres de qualquer peixe (incluindo de sua própria espécie), o que fará que o cadávere suma rapidamente.</h3>
     <h4>Possui uma versão alternativa encontrada nos biomas de Algas Sangrentas, conhecida como <a href="lamparina.html">Lamparina.</a></h4>
     </div>
+  <div class="bloco2">
+<h3> blá blá blá </h3>
+  </div>
+</div>
+<div class="baixo">
+</div>
 
 </body>
 </html>
