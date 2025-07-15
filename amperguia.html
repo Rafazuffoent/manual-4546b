@@ -3,33 +3,143 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>em desenvolvimento</title>
+    <title>Amperguia</title>
     <style>
-        .primeirotexto {
-
-background-color: rgb(79, 247, 219);
-padding: 10px;
-box-shadow: 0px 7px 8px ;
-border-radius: 20px;
-text-align: center;
+.video-fundo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100vw;
+  min-height: 100vh;
+  object-fit: cover;
+  z-index: -1; /* pra ficar no fundo */
 }
 
-.imgpeixe {
-  width: 50%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);;
-
-
-
+.linha-superior {
+  display: flex;
+  justify-content: space-between; /* espaço entre as duas divs */
+  align-items: flex-start;
+  gap: 20px; /* espaçamento entre esquerda e direita */
+  margin-bottom: 15px;
 }
+
+.bloco1{
+  width: 48%; /* divide o espaço horizontal */
+  background-color: rgb(161, 231, 143);
+  padding: 15px;
+  border-radius: 10px;
+}
+
+  .ampeelpda {
+    width: 75%;
+  }
+  
+    .ampeelimagem {
+width: 75%;
+}
+
+.bloco2 {
+width: 48%;
+background-color: rgb(215, 255, 250);
+padding: 15px;
+border-radius: 10px;
+}
+
+.baixo {
+  display: flex;
+  justify-content: space-between; /* espaço entre as duas divs */
+  align-items: flex-start;
+  gap: 20px; /* espaçamento entre esquerda e direita */
+}
+
+.adicionais {
+width: 48%;
+background-color: rgb(120, 174, 245);
+padding: 15px;
+border-radius: 10px;
+}
+
+.ovo {
+width: 48%;
+background-color: rgb(120, 174, 245);
+padding: 15px;
+border-radius: 10px;
+}
+
+.ovo-conteudo {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.ovoimg {
+  width: 120px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.texto-ovo {
+  flex: 1;
+}
+
+
     </style>
 </head>
 <body>
-    <div>
-<h2 class="primeirotexto">Essa página ainda está em desenvolvimento!</h2>
-<img src="cuddlehead.png" class="imgpeixe">
+            <video autoplay muted loop class="video-fundo">
+  <source src="fundorecifeesparço.mp4" type="video/mp4">
+    </video>
+    <div class="linha-superior">
+<div class="bloco1">
+    <h2>Amperguia</h2>
+    <img src="amperguia.png" alt="Clique para ouvir o som!" class="ampeelimagem" onclick="document.getElementById('som-ampeel').play()">
+    <audio id="som-ampeel" src="ampeelsom.mp3"></audio>
+    <h3>As Amperguias são criaturas enormes e serpentinas, com corpo segmentado, coberto por pontas capazes de gerar poderosos choques de bioeletricidade. </h3>
+    <h3>Essa corrente elétrica é provavelmente gerada por um circuito natural inacabado e com a adição de água como meio de fechar o circuito e gerar arcos elétricos de ponta a ponta.</h3>
+    <h3>A Amperguia frequentemente emite ruídos de choque quando está próximo, que também são ouvidos quando usa seus ataques elétricos contra outros animais e o jogador.</h3>
+    <h3>Seu ataque de choque causa cerca de 15 de dano à vida do jogador, e sua mordida retira 45 de vida.</h3>
 </div>
+<div class="bloco2">
+    <h2>Registro do banco de dados:</h2>
+    <img src="amperguiainfo.png" class="ampeelpda">
+    <h3>As amperguias são feroses e curiosos predadores, que habitam águas mais profundas</h3>
+    <h3>Sua estrutura croporal possui:</h3>
+    <h2>Pontas elétricas</h2>
+    <h3>Pontas montadas no tronco geram uma poderosa corrente elétrica que a amperguia usa para incapacitar sua presa.</h3>
+    <h2>Mandíbulas</h2>
+    <h3>Uma mandíbula grande e flexível, cravejada de dentes afiados. Se um predador mais rápido, mais forte e mais faminto vive nas proximidades, ele parece evitar a amperguia.</h3>
+    <h4>Avaliação: Evitar ou incapacitar</h4>
+</div>
+    </div>
+
+<div class="baixo">
+  <div class="adicionais">
+    <h2>Dados relevantes:</h2>
+    <h3>As amperguias possuem comportamento catémero, ou seja, são ativos durante o dia e noite.</h3>
+    <h3>Essas criaturas podem ser encontradas nos biomas: 
+      <a href="dev.html">Trincheira de Algas Sangrentas</a>, 
+      <a href="dev.html">Zona das Algas Sangrentas</a> e 
+      <a href="dev.html">Zona dos Bulbos</a>
+    </h3>
+  </div>
+
+<div class="ovo">
+  <div class="ovo-conteudo">
+    <img src="ampeelovo.png" class="ovoimg">
+    <div class="texto-ovo">
+      <h2>Ovos de Amperguia</h2>
+      <h3>As Amperguias nascem desses.</h3>
+      <h3>Podem ser encontrados nos biomas: 
+        <a href="dev.html">Trincheira das Algas Sangrentas</a> e 
+        <a href="dev.html">Zona dos Bulbos</a>. 
+        Nascem após alguns minutos se colocados em tanques do contenção alienígena.
+      </h3>
+    </div>
+  </div>
+</div>
+
+  </div>
+</div>
+
 </body>
 </html>
