@@ -5,6 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mordedor</title>
     <style>
+
+.video-fundo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100vw;
+  min-height: 100vh;
+  object-fit: cover;
+  z-index: -1; /* pra ficar no fundo */
+}
+
 .linha-superior {
   display: flex;
   justify-content: space-between; /* espaço entre as duas divs */
@@ -19,6 +30,10 @@
   border-radius: 10px;
 }
 
+  .mordedorpda {
+    width: 75%;
+  }
+  
 .mordedorimagem {
 width: 75%;
 }
@@ -32,25 +47,123 @@ border-radius: 10px;
 
 .baixo {
   margin-top: 30px;
-  background-color: rgba(0, 100, 200, 0.2);
+  background-color: rgba(34, 140, 247, 0.7);
   padding: 15px;
   border-radius: 10px;
+}
+
+.menu-toggle {
+  display: none;
+}
+
+.pda-botao {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 10;
+  cursor: pointer
+}
+
+.icone-pda {
+  width: 100px;
+}
+
+.pda-container {
+  position: fixed;
+  top: 0;
+  left: -450px; /* escondido */
+  width: 450px;
+  height: auto;
+  transition: left 0.4s ease;
+  z-index: 9;
+}
+
+/* Quando o checkbox for marcado, mostra o PDA */
+.menu-toggle:checked ~ .pda-container {
+  left: 0;
+}
+
+.pda-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Texto por cima da tela do PDA */
+.pda-conteudo {
+  position: absolute;
+  top: 110px;   /* ajuste vertical */
+  left: 110px;  /* ajuste horizontal */
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.pda-conteudo a {
+  color: cyan;
+  text-decoration: none;
+  font-size: 18px;
+  font-family: sans-serif;
+}
+
+.pda-conteudo a:hover {
+  color: white;
+  transform: translateX(5px);
+  transition: 0.2s;
+}
+
+.fundo {
+
+background-image: url(https://cdn.discordapp.com/attachments/1391104525540262032/1392656605216243712/latest.png?ex=68705408&is=686f0288&hm=32f6b8e7a873289edfe8702953ffb27a46fbd0898db2489051df3b47f4fa9193&);
+
+
+
 }
     </style>
 </head>
 <body>
+    <video autoplay muted loop class="video-fundo">
+  <source src="fundorecifeesparço.mp4" type="video/mp4">
+    </video>
+    <!-- Menu PDA -->
+<input type="checkbox" id="menu-pda" class="menu-toggle">
+<label for="menu-pda" class="pda-botao">
+  <img src="botao.png" class="icone-pda">
+</label>
+
+<div class="pda-container">
+  <img src="pdafundoa.png" class="pda-img">
+  <div class="pda-conteudo">
+    <a href="peixes.html">🐟 Criaturas</a>
+    <a href="dev.html">⚠️Em desenvolvimento</a>
+    <a href="dev.html">⚠️Em desenvolvimento</a>
+    <a href="dev.html">⚠️Em desenvolvimento</a>
+  </div>
+</div>
+
 <div class="linha-superior">
     <div class="bloco1"><h2>Mordedor</h2>
     <img src="mordedor.png" class="mordedorimagem" alt="Clique para ouvir o som!" onclick="document.getElementById('som-mordedor').play()">
     <audio id="som-mordedor" src="mordedorsom.mp3"></audio>
-    <h3>Os mordedores são pequenos predadores, extremamente rápido e territorial que eventualmente emitem sons de mordidas e rangidos (pode ser escutado clicando na imagem acima), essas criaturas atacam o jogador imediatamente quando próximos, e cada uma de suas mordidas causam 7 de dano. Os mordedores assim como <a href="carnivoros.html">outras criaturas carnívoras</a>  comerá da mão do jogador caso um peixe (vivo ou morto) seja oferecido. Essas criaturas comem cadáveres de qualquer peixe (incluindo de sua própria espécie), o que fará que o cadávere suma rapidamente.</h3>
+    <h3>Os mordedores são pequenos predadores, extremamente rápido e territorial que eventualmente emitem sons de mordidas e rangidos (pode ser escutado clicando na imagem acima), essas criaturas atacam o jogador imediatamente quando próximos, e cada uma de suas mordidas causam 7 de dano. </h3>
+    <h3>Os mordedores assim como <a href="carnivoros.html">outras criaturas carnívoras</a>  comerá da mão do jogador caso um peixe (vivo ou morto) seja oferecido.</h3>
+    <h3> Essas criaturas comem cadáveres de qualquer peixe (incluindo de sua própria espécie), o que fará que o cadáveres suma rapidamente.</h3>
     <h4>Possui uma versão alternativa encontrada nos biomas de Algas Sangrentas, conhecida como <a href="lamparina.html">Lamparina.</a></h4>
     </div>
   <div class="bloco2">
-<h3> blá blá blá </h3>
+<h2>Registro do banco de dados</h2>
+    <img src="mordedorinfo.png" class="mordedorpda">
+    <h3>Seu registro no Pda informa que 94% de seu corpo é músculo, 4% é de tecido conjuntivo e apenas 2% de cérebro, quase sempre tem fome.</h3>
+    <h3>Sua estrutura corporal possui:</h3>
+    <h2>Antena olfativa especializada</h2> <h4>A antena na cabeça dos mordedores servem para detectar flúidos na água à uma distancia impressionante.</h4>
+    <h2>Par extra de olhos</h2> <h4>Esses 2 olhos extras nas laterais provavelmente servem para ter uma visão periférica de predadores e ameaças.</h4>
+    <h2>Barbatana da cauda superdesenvolvida</h2> <h4>Essa cauda é usada visando a velocidade de um conjunto de mordedores, juntos, podendo sucumbir qualquer presa em até 100 vezes o peso de um mordedor.</h4>
+    
+    
   </div>
 </div>
-<div class="baixo">
+<div class="baixo"> <h2>Dados relevantes</h2> <h3>Os mordedores possuem comportamento catémero, ou seja, são ativos durante o dia e noite.</h3>
+  <h3>Essas criaturas podem ser encontradas nos biomas: <a href="dev.html"> Planaltos Gramados</a>, <a href="dev.html"> Cavernas de Coguléia</a>, <a href="dev.html"> Montanhas</a> e <a href="dev.html"> Cavernas montanhosas</a> </h3> 
 </div>
 
 </body>
