@@ -3,33 +3,174 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>em desenvolvimento</title>
+    <title>Lamparina</title>
     <style>
-        .primeirotexto {
-
-background-color: rgb(79, 247, 219);
-padding: 10px;
-box-shadow: 0px 7px 8px ;
-border-radius: 20px;
-text-align: center;
+.video-fundo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100vw;
+  min-height: 100vh;
+  object-fit: cover;
+  z-index: -1; /* pra ficar no fundo */
 }
 
-.imgpeixe {
-  width: 50%;
+.linha-superior {
+  display: flex;
+  justify-content: space-between; /* espaço entre as duas divs */
+  align-items: flex-start;
+  gap: 20px; /* espaçamento entre esquerda e direita */
+}
+
+.bloco1{
+  width: 48%; /* divide o espaço horizontal */
+  background-color: rgb(241, 226, 89);
+  padding: 15px;
+  border-radius: 10px;
+}
+
+  .lamparinapda {
+    width: 75%;
+  }
+  
+    .lamparinaimagem {
+width: 75%;
+}
+
+.bloco2 {
+width: 48%;
+background-color: rgb(172, 255, 244);
+padding: 15px;
+border-radius: 10px;
+}
+
+.baixo {
+  margin-top: 30px;
+  background-color: rgba(34, 247, 236, 0.7);
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.menu-toggle {
+  display: none;
+}
+
+.pda-botao {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 10;
+  cursor: pointer
+}
+
+.icone-pda {
+  width: 100px;
+}
+
+.pda-container {
+  position: fixed;
+  top: 0;
+  left: -450px; /* escondido */
+  width: 450px;
+  height: auto;
+  transition: left 0.4s ease;
+  z-index: 9;
+}
+
+/* Quando o checkbox for marcado, mostra o PDA */
+.menu-toggle:checked ~ .pda-container {
+  left: 0;
+}
+
+.pda-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Texto por cima da tela do PDA */
+.pda-conteudo {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: 110px;   /* ajuste vertical */
+  left: 110px;  /* ajuste horizontal */
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.pda-conteudo a {
+  color: cyan;
+  text-decoration: none;
+  font-size: 18px;
+  font-family: sans-serif;
+}
+
+.pda-conteudo a:hover {
+  color: white;
+  transform: translateX(5px);
+  transition: 0.2s;
+}
+
+.fundo {
+
+background-image: url(https://cdn.discordapp.com/attachments/1391104525540262032/1392656605216243712/latest.png?ex=68705408&is=686f0288&hm=32f6b8e7a873289edfe8702953ffb27a46fbd0898db2489051df3b47f4fa9193&);
 
 
 
 }
+
     </style>
 </head>
 <body>
-    <div>
-<h2 class="primeirotexto">Essa página ainda está em desenvolvimento!</h2>
-<img src="cuddlehead.png" class="imgpeixe">
+        <video autoplay muted loop class="video-fundo">
+  <source src="fundorecifeesparço.mp4" type="video/mp4">
+    </video>
+    <!-- Menu PDA -->
+<input type="checkbox" id="menu-pda" class="menu-toggle">
+<label for="menu-pda" class="pda-botao">
+  <img src="botao.png" class="icone-pda">
+</label>
+
+<div class="pda-container">
+  <img src="pdafundoa.png" class="pda-img">
+  <div class="pda-conteudo">
+    <a href="peixes.html">🐟 Criaturas</a>
+    <a href="dev.html">⚠️Em desenvolvimento</a>
+    <a href="dev.html">⚠️Em desenvolvimento</a>
+    <a href="dev.html">⚠️Em desenvolvimento</a>
+  </div>
 </div>
+<div class="linha-superior">
+    <div class="bloco1">
+        <h2>Lamparina</h2> <img src="lamparina.png"alt="Clique para ouvir o som!" class="lamparinaimagem" onclick="document.getElementById('som-mordedor').play()">
+            <audio id="som-mordedor" src="lamparinasom.mp3"></audio>
+        <h3>As Lamparinas são pequenos predadores, levemente rápidas e territoriais que eventualmente emitem sons de mordidas e rangidos (pode ser escutado clicando na imagem acima), essas criaturas atacam o jogador imediatamente quando bem próximas (possui curto alcance de ataque), e cada uma de suas mordidas causam 7 de dano.</h3>
+        <h3>Os mordedores assim como <a href="carnivoros.html">outras criaturas carnívoras</a>  comerá da mão do jogador caso um peixe (vivo ou morto) seja oferecido.</h3>
+        <h3>Essas criaturas optam por uma caça mais individual, não se juntando em grupos, além de ter um método de caça menos agressivo e mais próximo.</h3>
+       <h3>Essas criaturas comem cadáveres de qualquer peixe (incluindo de sua própria espécie), o que fará que o cadáveres suma rapidamente.</h3>
+        <h4>Possui uma versão alternativa de águas rasas conhecida como <a href="mordedor.html">mordedor</a></h4>
+    </div>
+
+    <div class="bloco2">
+        <h2>Registro do banco de dados:</h2>
+        <img src="lamparinainfo.png" class="lamparinapda">
+        <h3>O seu registro no PDA consta que sua necessária proximidade para mordida, e lenta caça provavelmente é resultado de sua cegueira.</h3>
+        <h3>Sua estrutura corporal possui:</h3>
+        <h2>Caule Olfativo</h2>
+        <h3>Enquanto <a href="mordedor.html">sua versão não adaptada para águas profundas</a> possuía uma antena para localização e perseguição, a Lamparina utiliza seu caule olfativo não para perseguir, mas sim para atrair a presa, que quando se aproxima muito, é devorada pela Lamparina</h3>
+        <h2>Arcada dentária</h2>
+        <h3>Uma fileira de dentes afiados e penetrantes é tudo o que a Lamparina precisa para dilacerar suas presas.</h3>
+        <h2>Olhos Cegos</h2>
+        <h3>Esta criatura encontrou pouca utilidade para os olhos nas cavernas profundas e escuras que habita, e seus olhos provavelmente são sensíveis apenas à grandes flutuações nas fontes de luz locais (por exemplo, quando uma presa cruza seu caminho).</h3>
+    </div>
+</div>
+
+<div class="baixo">
+<h2>Dados relevantes</h2>
+<h3>Os mordedores possuem comportamento catémero, ou seja, são ativos durante o dia e noite.</h3>
+<h3>Essas criaturas são encontradas nos biomas: <a href="dev.html">Cavernas de Algas Sangrentas</a> e <a href="dev.html">Zona das Algas Sangrentas</a></h3>
+</div>
+
+
 </body>
 </html>
