@@ -81,7 +81,73 @@ border-radius: 10px;
 .texto-ovo {
   flex: 1;
 }
+.menu-toggle {
+  display: none;
+}
 
+.pda-botao {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 10;
+  cursor: pointer
+}
+
+.icone-pda {
+  width: 100px;
+}
+
+.pda-container {
+  position: fixed;
+  top: 0;
+  left: -450px; /* escondido */
+  width: 450px;
+  height: auto;
+  transition: left 0.4s ease;
+  z-index: 9;
+}
+
+/* Quando o checkbox for marcado, mostra o PDA */
+.menu-toggle:checked ~ .pda-container {
+  left: 0;
+}
+
+.pda-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Texto por cima da tela do PDA */
+.pda-conteudo {
+  position: absolute;
+  top: 110px;   /* ajuste vertical */
+  left: 110px;  /* ajuste horizontal */
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.pda-conteudo a {
+  color: cyan;
+  text-decoration: none;
+  font-size: 18px;
+  font-family: sans-serif;
+}
+
+.pda-conteudo a:hover {
+  color: white;
+  transform: translateX(5px);
+  transition: 0.2s;
+}
+
+.fundo {
+
+background-image: url(https://cdn.discordapp.com/attachments/1391104525540262032/1392656605216243712/latest.png?ex=68705408&is=686f0288&hm=32f6b8e7a873289edfe8702953ffb27a46fbd0898db2489051df3b47f4fa9193&);
+
+
+
+}
 
     </style>
 </head>
@@ -89,6 +155,21 @@ border-radius: 10px;
             <video autoplay muted loop class="video-fundo">
   <source src="fundorecifeesparço.mp4" type="video/mp4">
     </video>
+    <!-- Menu PDA -->
+<input type="checkbox" id="menu-pda" class="menu-toggle">
+<label for="menu-pda" class="pda-botao">
+  <img src="botao.png" class="icone-pda">
+</label>
+
+<div class="pda-container">
+  <img src="pdafundoa.png" class="pda-img">
+  <div class="pda-conteudo">
+    <a href="peixes.html">🐟 Criaturas</a>
+    <a href="dev.html">⚠️Em desenvolvimento</a>
+    <a href="dev.html">⚠️Em desenvolvimento</a>
+    <a href="dev.html">⚠️Em desenvolvimento</a>
+  </div>
+</div>
     <div class="linha-superior">
 <div class="bloco1">
     <h2>Amperguia</h2>
